@@ -29,11 +29,22 @@ class Database{
 	//opening connection & closing connection
 	//every time pass a query call a string
 	public function openConnection(){
+		$this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+		//established connection
 
+		//referencing correct varaiable
+		//checks if there is an error with the connection
+	    if ($this->connection->connect_error) {
+			die("<p>Error:" . $this->connection->connect_error). "</p>";
+		}
 	}
-
+//close connection that was opened
 	public function closeConnection(){
-
+		//checck wether or not we've opened connection, if so it can be closed
+		//checks if variable has been set
+		if(isset($this->connection)){
+			$this->connection->close();
+		}
 	}
 
 	public function query($string){
