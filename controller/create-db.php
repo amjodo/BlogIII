@@ -48,4 +48,3 @@ else {
 	echo "<p>$connection->error</p>";
 }
 //closes connection
-$connection->close();

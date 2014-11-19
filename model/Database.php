@@ -39,6 +39,7 @@ class Database{
 		}
 	}
 //close connection that was opened
+	//
 	public function closeConnection(){
 		//checck wether or not we've opened connection, if so it can be closed
 		//checks if variable has been set
@@ -48,6 +49,16 @@ class Database{
 	}
 
 	public function query($string){
+		$this->openConnection();
+		//telling it to query
+		$query = $this->connection->query($string);
+		//execute query on our database
+		//huge lines of code stored in string variable
+		$this->closeConnection();
 
+		retutn $query;
 	}
+	//open connection to database
+	//get result if query was true or false
+	//return result true because it was successful or false because it wasn't
 }

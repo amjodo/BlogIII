@@ -5,7 +5,7 @@
     
     // able to create connection using mysqli object
     // all these parameters are in the database.php
-    $connection = new mysqli($host, $username, $password, $database);
+    
 
     // different from the other post(blog post)
     // this POST means that we're sending information/data or recive info
@@ -27,4 +27,4 @@
    }
     
     // run query on the connection and close our connection
-    $connection->close();
+    

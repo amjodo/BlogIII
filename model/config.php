@@ -11,4 +11,8 @@
 //stores blog_db in database	
 	$database = "blog_db";
 //information for xxamp	
-?>
+
+
+//database object
+//pass into consturctor, uses information, stores into variable	
+$connection = new Database($host, $username, $password, $database);
