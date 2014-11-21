@@ -9,6 +9,8 @@ class Database{
 	private $username;
 	private $password;
 	private $database;
+	public $error;
+	//want information to this variable
 //global variables, able to be acessed throughout program
 	//cut down lines of code
 	//public so it can be acessed anywhere
@@ -23,6 +25,31 @@ class Database{
 		$this->username = $username;
 		$this->password = $password;
 		$this->database = $database;
+
+$this->connection = new mysqli($host, $username, $password);
+//checks if there is an error with the connection
+	if ($this->connection->connect_error) {
+		die("<p>Error:" . $this->connection->connect_error). "</p>";
+	}
+//variable that checks if other variable exists
+	$exists = $this->connection->select_db($database);
+	
+//if variable exists then do the command underneath
+// creating database
+	if(!$exists){
+		$query = $this->connection->query("CREATE DATABASE $database");
+//checking if database is created if databse was created print out this message
+// create the database ONCE
+
+	if($query) {
+		echo "<p>sucessfully created database:" . $database. "</p>";
+	}
+}
+//executed if we already have a database
+else {
+	echo "<p>Database already exists.</p>";
+}
+
 	}
 //no longer call code over and over again, it is present here
 	//call on the functionn and it will preform code
@@ -54,9 +81,14 @@ class Database{
 		$query = $this->connection->query($string);
 		//execute query on our database
 		//huge lines of code stored in string variable
+		
+		if(!$query){
+			$this->error = $this->connection->error;
+		}
+
 		$this->closeConnection();
 
-		retutn $query;
+		return $query;
 	}
 	//open connection to database
 	//get result if query was true or false
