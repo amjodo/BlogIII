@@ -3,6 +3,8 @@
 	require_once(__DIR__ . "/database.php");
 //stores the path to our project
 	$path = "/BlogIII/";
+//preserves & saves information
+	session_start();
 
 //stores localhost
 	$host = "localhost";
@@ -14,7 +16,11 @@
 	$database = "blog_db";
 //information for xxamp	
 
-
-//database object
-//pass into consturctor, uses information, stores into variable	
-$connection = new Database($host, $username, $password, $database);
+if(!isset($_SESSION["connection"])) {
+	//database object
+	//pass into consturctor, uses information, stores into variable	
+	$connection = new Database($host, $username, $password, $database);
+	//preserves & saves information
+	$_SESSION["connection"] = $connection;
+	//creating database asigning to session
+}

@@ -14,7 +14,7 @@
     
     // run query to insert things into the table
     // sql command starts off with an action/verb
-    $query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+    $query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
     // use conditional statement to see if it's true or false
     // to see we are successful in inserting information into the database
     if($query){
@@ -23,7 +23,7 @@
     }
     else {
         // if not successful display an error
-        echo "<p>$connection->error</p>";
+        echo "<p>". $_SESSION["connection"]->error . "</p>";
    }
     
     // run query on the connection and close our connection

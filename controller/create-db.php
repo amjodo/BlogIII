@@ -10,7 +10,7 @@
 //(11) means up to 11 values
 //NOT NULL can't be empty
 //AUTO_INCREMENT automatically increments ids 
-$query = $connection->query("CREATE TABLE posts ("
+$query = $_SESSION["connection"]->query("CREATE TABLE posts ("
 	."id int(11) NOT NULL AUTO_INCREMENT,"
 	. "title varchar (255) NOT NULL,"
 	. "post text NOT NULL,"
@@ -23,6 +23,6 @@ if($query) {
 //else statement is fired when statement is false
 //handles both code and recieves hmtl codes
 else {
-	echo "<p>$connection->error</p>";
+	echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
 
