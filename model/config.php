@@ -24,3 +24,4 @@ if(!isset($_SESSION["connection"])) {
 	$_SESSION["connection"] = $connection;
 	//creating database asigning to session
 }
+
