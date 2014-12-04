@@ -14,6 +14,7 @@ $query = $_SESSION["connection"]->query("CREATE TABLE posts ("
 	."id int(11) NOT NULL AUTO_INCREMENT,"
 	. "title varchar (255) NOT NULL,"
 	. "post text NOT NULL,"
+	. "DateTime datetime NOT NULL ,"
 	."PRIMARY KEY (id))");
 //if table was created print out this message
 //true or false statement
@@ -25,7 +26,7 @@ if($query) {
 else {
 	echo "<p>" . $_SESSION["connection"]->error . "</p>";
 }
-
+//same as the top part, just adjusted a bit to correspond with new code
 $query = $_SESSION["connection"]->query("CREATE TABLE users ("
 	."id int(11) NOT NULL AUTO_INCREMENT,"
 	."username varchar (30) NOT NULL,"

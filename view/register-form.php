@@ -1,6 +1,13 @@
 <!-- allows the user to be apart of the blog, if not a user
 won't be allowed to post-->
-<form>
+<?php 
+//finding and going into the folders selected
+ require_once(__DIR__ . "/../model/config.php");
+ ?>
+
+<h1>Register</h1>
+
+<form method="post" action="<?php echo $path . "controller/create-user.php"; ?>">
 	<div>
 		<label for="email">Email:</label>	
 		<input type="text" name="email" /> 
