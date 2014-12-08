@@ -1,3 +1,13 @@
-max-width: 860px;
-font-size: 20px;
-background-color: white;
+html{
+	background-image: url("https://ununsplash.imgix.net/uploads/1413399939678471ea070/2c0343f7?q=75&fm=jpg&s=4eafb1c66a6e52aede9e0419a0513010");
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
+p{
+	background-color: white;
+	opacity: 0.4;
+	color: black;
+}
