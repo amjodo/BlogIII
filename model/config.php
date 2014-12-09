@@ -5,6 +5,10 @@
 	$path = "/BlogIII/";
 //preserves & saves information
 	session_start();
+//starts session	
+	session_regenerate_id(true);
+//maintain same session id, regenerates id using original id
+//starts new id so hackers can't access session	
 
 //stores localhost
 	$host = "localhost";
