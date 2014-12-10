@@ -12,3 +12,14 @@
     require_once(__DIR__ . "/controller/read-posts.php");
 //separated code to be able to maintain easily    
 ?>
+
+<<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>

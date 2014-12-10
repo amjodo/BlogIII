@@ -3,7 +3,7 @@
 
 	function authenticateUser() {
 		//check session variable and if its true
-		if(isset($_SESSION["authenticated"])) {
+		if(!isset($_SESSION["authenticated"])) {
 			return false;
 		}
 		else {
