@@ -40,14 +40,14 @@
 		$query = $this->connection->query("CREATE DATABASE $database");
 //checking if database is created if databse was created print out this message
 // create the database ONCE
-	if($query) {
+	//if($query) {
 		echo "<p>sucessfully created database:" . $database. "</p>";
-	}
+	//}
 }
 //executed if we already have a database
-	else {
-		echo "<p>Database already exists.</p>";
-	}
+	//else {
+		///echo "<p>Database already exists.</p>";
+	//}
 
 	}
 //no longer call code over and over again, it is present here

@@ -17,14 +17,14 @@
 		."PRIMARY KEY (id))");
 //if table was created print out this message
 //true or false statement
-	if($query) {
-		echo "<p>Succesfully created table: posts</p>";
-	}
+	//if($query) {
+	//	echo "<p>Succesfully created table: posts</p>";
+	//}
 //else statement is fired when statement is false
 //handles both code and recieves hmtl codes
-	else {
-		echo "<p>" . $_SESSION["connection"]->error . "</p>";
-	}
+	//else {
+		//echo "<p>" . $_SESSION["connection"]->error . "</p>";
+	//}
 //same as the top part, just adjusted a bit to correspond with new code
 	$query = $_SESSION["connection"]->query("CREATE TABLE users ("
 		."id int(11) NOT NULL AUTO_INCREMENT,"
@@ -34,9 +34,9 @@
 		. "salt char (128)NOT NULL,"
 		."PRIMARY KEY(id))");
 
-	if($query){
-		echo "<p>Succesfully created table: users</p>";
-	}
-	else {
-		echo "<p>" . $_SESSION["connection"]->error . "</p>";
-	}
+	//if($query){
+		//echo "<p>Succesfully created table: users</p>";
+	//}
+	//else {
+		//echo "<p>" . $_SESSION["connection"]->error . "</p>";
+	//}
