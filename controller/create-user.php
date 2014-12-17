@@ -1,3 +1,4 @@
+
 <?php
 //goes into this file and completes instructions
 	require_once(__DIR__ . "/../model/config.php");
@@ -19,11 +20,14 @@
 		."salt = '$salt'");
 
 	if($query) {
-		echo "Successfully created user: $username";
+		echo "Successfully created user: $username      ";
 	}
 	else {
 		echo "<p>" . $_SESSION["connection"]->error . "</p>";
 	}
 ?>
+<link rel="stylesheet" type="text/css" href="main.css">
+<button type="button"><a href="blog.php">Home</a></button>
 
-<button type="button"><a href="blog.php">Home</a></button>	
+
+

@@ -19,8 +19,17 @@
 		else {
 			echo "<p>Invalid username and password</p>";
 		}
+		
 	}
-	else {
-		echo "<p>Invalid username and password</p>";
-	}
+	
 	//check if information was stored, get array store into row
+?>	
+<html>
+<head>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<meta charset="UTF-8"> 
+	 <title> Created User</title>
+</head>
+<button type="button"><a href="blog.php">Home</a></button>

@@ -17,11 +17,7 @@ available for every page of our website to use-->
 		<header>
 			<p class="header"><p> <h1>Pretty Little Liars</h1> <h5>Blog</h5></p> </p>
 			<nav id="nav1">
-				<!--<a href="blog.php">Home  </a>
-				<a href="register.php">Register   </a>
-				<a href="login-user.php">Login  </a>
-				<a href="url">Logout   </a>-->
-				<button type="button"><a class="pure-button pure-button-active" href="#" href="register.php">Register</a></button>
+				<button type="button"><a href="register.php">Register</a></button>
 				<button type="button"><a href="login.php">Login</a></button>
 				<button type="button"><a href="/controller/logout-user.php">Logout</a></button>
 			</nav>

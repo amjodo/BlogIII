@@ -1,13 +1,4 @@
-<link rel="stylesheet" type="text/css" href="twoo.css">
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
 
-</body>
-</html>
  <?php
 // require config file
 //replaced database.php with config.php
